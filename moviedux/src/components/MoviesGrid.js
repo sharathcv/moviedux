@@ -5,8 +5,11 @@ import '../styles.css';
 export default function MoviesGrid() {
     const [movies, setMovies] = useState([]);
     useEffect((() => {
-        const m = ["a", "b", "c"];
-        setMovies(m);
+
+        fetch("movies.json")
+            .then(response => response.json())
+            .then(data => setMovies(data));
+
     }), []); // empty array defines the condition on which useEffect will be called.
     return (
         <div>{ movies.length }</div>
