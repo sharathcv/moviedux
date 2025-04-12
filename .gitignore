@@ -136,3 +136,4 @@ dist
 .pnp.*
 moviedux/package-lock.json
 bug-blaster/package-lock.json
+context-api-app/package-lock.json
